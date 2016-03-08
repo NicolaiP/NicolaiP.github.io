@@ -3,13 +3,40 @@
     <head>
         <meta charset="utf-8">
         <title>D3 Test</title>
-        <script type="text/javascript" src="d3/d3.v3.js"></script>
+        <script type="text/javascript" src="d3/d3/d3.v3.js"></script>
     </head>
     <body>
+    <style type="text/css">
+
+p {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+</style>
+
         <script type="text/javascript">
+          var dataset = [ 5, 10, 15, 20, 25 ];
+          d3.select("body").selectAll("p")
+          .data(dataset)
+          .enter()
+          .append("p")
+           .text(function(d) { return "I can count up to " + d; })
+           .style("color", function(d) {
+             if (d > 15) {   //Threshold of 15
+              return "red";
+            } else {
+              return "black";
+          }
+          });
         </script>
-    </body>
-    <body>
-      <h1>Breaking News</h1>
+        <svg width="500" height="500">
+<rect x="0" y="60" width="80" height="80" fill="purple" stroke="gray" stroke-width="2" opacity="1"/>
+<rect x="50" y="45" width="80" height="80" fill="blue" stroke="gray" stroke-width="2" opacity="0.8"/>
+<rect x="100" y="30" width="80" height="80" fill="green" stroke="gray" stroke-width="2" opacity="0.6"/>
+<rect x="150" y="15" width="80" height="80" fill="yellow" stroke="gray" stroke-width="2" opacity="0.4"/>
+<rect x="200" y="0" width="80" height="80" fill="red" stroke="gray" stroke-width="2" opacity="0.2"/>
+</svg>
     </body>
 </html>
