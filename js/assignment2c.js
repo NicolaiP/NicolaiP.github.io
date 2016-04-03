@@ -55,13 +55,13 @@ var chart3 = d3.select("#chart3")
 
 
 // Load datasets
-d3.csv('csv/SFPDmodified2003.csv',function(error,data){
+d3.csv('csv/SFPDmodified.csv',function(error,data){
   if (error) {
     console.log(error)
   }
   data.forEach(function(d){
-    d.Prostitution = +d.Prostitution
-    d.Theft = +d.Theft
+    d.Prostitution = +d.Prostitution2003
+    d.Theft = +d.Theft2003
   })
 
   //xScale3.domain(d3.range(data.length));
@@ -105,8 +105,8 @@ d3.csv('csv/SFPDmodified2003.csv',function(error,data){
   .on("mouseover", function(d) {
 
     //Get this bar's x/y values, then augment for the tooltip
-    var xPosition = parseFloat(d3.select(this).attr("x")) + xScale3.rangeBand() / 2+290;
-    var yPosition = parseFloat(d3.select(this).attr("y")) / 2 + height3 / 2+1020;
+    var xPosition = event.pageX - xScale3.rangeBand()
+    var yPosition = event.pageY
 
     //Update the tooltip position and value
     d3.select("#tooltip")

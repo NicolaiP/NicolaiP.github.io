@@ -10,11 +10,11 @@
     font-size: 11px;
 }
 
-/*
-body {
-    fill: green;
+body{
+  background-image: image(background.jpg);
 }
-*/
+
+
 circle:hover{
   fill: orange;
 }
@@ -68,6 +68,8 @@ button {
 p.normal {
     font-size: 12px;
     font-family: Helvetica, Arial, sans-serif;
+    text-align: justify;
+    width: 200;
 }
 
 html, body {
@@ -82,4 +84,16 @@ html {
 
 div{
     text-align:center;
+}
+
+div.text_cell_render {
+    outline: 0;
+    resize: none;
+    width: inherit;
+    border-style: none;
+    padding: .5em .5em .5em .4em;
+    color: #000;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }

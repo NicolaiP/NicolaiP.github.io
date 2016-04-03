@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="icon" href="images/lol.jpg" type="image/jpg" sizes="16x16">
   <title>Assingment2</title>
   <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
@@ -11,8 +12,26 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
+  <div>
+    <h1>Assignment 2</h1>
+    <p.normal>
+      The main purpose of this assignment is to demonstrate the ability to make various kinds of visualizations using D3.js.<br>
+    </p>
+  </div>
+
+  <br>
+  <h2>Assignment 2A: Simple SVG stuff</h2>
+  <div>
+    <p.normal>
+      In this exercise a for loop is used to itterate through each value in a dataset, in order to print out the values.<br>
+      When the extracted data value is above 15 the color of the paragraph changes from black to red. This is done
+      using an "if"-statement.<br>
+      <br>
+      Furthermore 5 rectangles are created using an SVG object
+    </p>
+  </div>
+
   <div id="chart1">
-    <h2>Assignment 2A: Simple SVG stuff</h2>
     <div>
       <script src="js/assignment2a.js"></script>
     </div>
@@ -30,19 +49,42 @@
   </div>
 
   <br>
-  <h2>Assignment 2B: One scatter plot and two datasets</h2>
+  <h2>Assignment 2B: One Scatter Plot and Two Datasets</h2>
+  <div class="text_cell_render">
+    <p.normal>
+      This scatterplot illustrates the relationship between prostitution and vehicle theft in each district of San Fransisco.<br>
+      The x-axis corresponds to the number of prostitution incidents and the y-axis corresponds to the number of vehicle thefts. <br> The radius of the
+      scatters are proportional to the total number of crimes in that district.<br>
+      <br>
+      The two buttons allows the user to switch between two sets of data: "crimes of 2003" and "crimes of 2015".<br>
+      To differentiate between the districs each scatter/circle is appended a tooltip. Simply hover the mouse over the circle
+      to see the district label.<br>
+      <br>
+      Notice that the axes does not change when changing data set. This is an intentional feature of the chart designed to better visualize change. <br>
+      If the axes scale accordingly to the values it can be very difficult to see if a value increases or decreases.
+    </p>
+  </div>
+
   <div id="chart2">
     <button type="button" class="btn btn-default" id='2003'>Year 2003</button>
     <button type="button" class="btn btn-default" id='2015'>Year 2015</button>
     <div>
       <script src="js/assignment2b.js"></script>
     </div>
-
   </div>
   <br>
 
 
-  <h2>Assignment 2C: One barchart and (at least) two datasets</h2>
+  <h2>Assignment 2C: One Barchart and Two Datasets</h2>
+  <div class="text_cell_render">
+    <p.normal>
+      This barchart illustrates prostitution incidents and vehicle theft incidents in 2003. Each bar corresponds to a distict in San francisco <br>
+      The two buttons allows the user to toogle between prostitution incidents and vehicle theft. <br>
+      <br>
+      As an additional feature each bar has assigned a "div" tooltip box. <br>
+      This tooltip shows the exact incident count, as this can be troublesome to read from the axis label.
+    </p>
+  </div>
   <div id="chart3">
     <button type="button" class="btn btn-default" id='Prostitution'> Prostitution </button>
     <button type="button" class="btn btn-default" id='Theft'> Vehicle Theft </button>
@@ -57,7 +99,17 @@
   </div>
   <br>
 
-  <h2>Assignment 2D: Visualizing geodata</h2>
+  <h2>Assignment 2D: Visualizing Geodata</h2>
+  <div class="text_cell_render">
+    <p.normal>
+      The last exercise concerns visualizing geodata. The map contains every reported incident of prostitution in San Francisco. <br>
+      Using a K nearest neighbours (KNN) algorithm the incidents (or point on the map) is assigned to a cluster. <br>
+      Using the 5 buttons the user can toogle between the number of clusters and see how the number of clusters affect the result. <br>
+      <br>
+      The KNN algorithm was implemented in Python and only the results are visualized in this chart. Clicking the link below, <br>
+      will bring you to the iPython notebook used for creating these results.
+    </p>
+  </div>
   <div id="chart4">
     <div>
       <button type="button" class="btn btn-default" id='K2'>K = 2</button>
@@ -68,6 +120,9 @@
     </div>
     <div>
       <script src="js/assignment2d.js"></script>
+    </div>
+    <div>
+      <p.normal><a href="https://github.com/RSten/RSten.github.io/blob/master/K-means.ipynb">Link to iPython</a></p>
     </div>
 
   </div>

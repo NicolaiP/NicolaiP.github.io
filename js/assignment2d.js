@@ -37,7 +37,7 @@ d3.json('json/sfpddistricts.json',function(data){
 
 
 		// possible colors
-		var colors = ['blue','black','yellow','green','red','pink']
+		var colors = ['blue','black','yellow','green','red','magenta']
 
 		// function for accessing colors
 		function updateColors(d,i){
@@ -80,7 +80,7 @@ d3.json('json/sfpddistricts.json',function(data){
 			return projection([d.lon, d.lat])[1];
 		})
 		.attr("r", 2)
-		.attr("fill",'blue')
+		.attr("fill",updateColors)
 		.style("opacity", 0.75);
 
 
@@ -91,19 +91,19 @@ d3.json('json/sfpddistricts.json',function(data){
 
 				data.forEach(function(d){
 				if (paragraphID == 'K2' ) {
-					d.label = d.labelK2
+					d.label = +d.labelK2
 				}
 				else  if (paragraphID == 'K3' ) {
-					d.label = d.labelK3
+					d.label = +d.labelK3
 				}
 				else if (paragraphID == 'K4' ) {
-					d.label = d.labelK4
+					d.label = +d.labelK4
 				}
 				else if (paragraphID == 'K5' ) {
-					d.label = d.labelK5
+					d.label = +d.labelK5
 				}
 				else if (paragraphID == 'K6' ) {
-					d.label = d.labelK6
+					d.label = +d.labelK6
 				}
 				})
 				updateChart4(data)
