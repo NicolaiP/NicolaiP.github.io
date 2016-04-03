@@ -1,17 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>D3</title>
-        <script type="text/javascript" src="d3/d3.v3.js"></script>
+<head>
+  <meta charset="utf-8">
+  <title>Assingment2</title>
+  <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div id="chart1">
+    <h2>Assignment 2A: Simple SVG stuff</h2>
+    <div>
+      <script src="js/assignment2a.js"></script>
+    </div>
 
-    </head>
-    <body>
-      <h2>Crime Fucking Riders</h2>
+    <div>
+      <!--2 is added so that the gray stroke will be displayed-->
+      <svg width="284" height="200">
+        <rect x="2" y="62" width="80" height="80" fill="purple" stroke="gray" stroke-width="2" opacity="1"></rect>
+        <rect x="52" y="47" width="80" height="80" fill="blue" stroke="gray" stroke-width="2" opacity="0.8"></rect>
+        <rect x="102" y="32" width="80" height="80" fill="green" stroke="gray" stroke-width="2" opacity="0.6"></rect>
+        <rect x="152" y="17" width="80" height="80" fill="yellow" stroke="gray" stroke-width="2" opacity="0.4"></rect>
+        <rect x="202" y="2" width="80" height="80" fill="red" stroke="gray" stroke-width="2" opacity="0.2"></rect>
+      </svg>
+    </div>
+  </div>
 
-      <iframe frameborder="0" width="500" height="300"
-      src = "https://www.youtube.com/embed/CH9B5A6WKzs?autoplay=1">
-    </iframe>
+  <br>
+  <h2>Assignment 2B: One scatter plot and two datasets</h2>
+  <div id="chart2">
+    <button type="button" class="btn btn-default" id='2003'>Year 2003</button>
+    <button type="button" class="btn btn-default" id='2015'>Year 2015</button>
+    <div>
+      <script src="js/assignment2b.js"></script>
+    </div>
 
-    </body>
+  </div>
+  <br>
+
+
+  <h2>Assignment 2C: One barchart and (at least) two datasets</h2>
+  <div id="chart3">
+    <button type="button" class="btn btn-default" id='Prostitution'> Prostitution </button>
+    <button type="button" class="btn btn-default" id='Theft'> Vehicle Theft </button>
+    <div id="tooltip" class="hidden">
+      <p><strong>Crime Count:</strong></p>
+      <p><span id="value">100</span></p>
+    </div>
+    <div>
+    <script src="js/assignment2c.js"></script>
+    </div>
+
+  </div>
+  <br>
+
+  <h2>Assignment 2D: Visualizing geodata</h2>
+  <div id="chart4">
+    <div>
+      <button type="button" class="btn btn-default" id='K2'>K = 2</button>
+      <button type="button" class="btn btn-default" id='K3'>K = 3</button>
+      <button type="button" class="btn btn-default" id='K4'>K = 4</button>
+      <button type="button" class="btn btn-default" id='K5'>K = 5</button>
+      <button type="button" class="btn btn-default" id='K6'>K = 6</button>
+    </div>
+    <div>
+      <script src="js/assignment2d.js"></script>
+    </div>
+
+  </div>
+
+</body>
 </html>
