@@ -11,7 +11,7 @@
 }
 
 body{
-  background-image: image(background.jpg);
+  background-image: url(images/background.jpg);
 }
 
 
